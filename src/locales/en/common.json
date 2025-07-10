@@ -1,0 +1,24 @@
+{
+	"LocaleLayout": {
+		"description": "Site description"
+	},
+	"LocaleSwitcher": {
+		"label": "Change language",
+		"locale": "{locale, select, es {Spanish} en {English} other {Unknown}}"
+	},
+	"Navigation": {
+		"item1": "Item 1",
+		"item2": "Item 2",
+		"menu": "Menu"
+	},
+	"Footer": {
+		"description": "This is a generic website footer.",
+		"links": "Links",
+		"item1": "Item1",
+		"legal": "Legal",
+		"privacy": "Privacy Policy",
+		"terms": "Terms & Conditions",
+		"language": "Language",
+		"social": "Follow Us"
+	}
+}

@@ -1,0 +1,22 @@
+{
+	"arrowParens": "avoid",
+	"bracketSpacing": true,
+	"htmlWhitespaceSensitivity": "css",
+	"insertPragma": false,
+	"bracketSameLine": true,
+	"jsxSingleQuote": true,
+	"printWidth": 150,
+	"proseWrap": "preserve",
+	"quoteProps": "as-needed",
+	"requirePragma": false,
+	"semi": true,
+	"singleQuote": true,
+	"tabWidth": 2,
+	"trailingComma": "none",
+	"useTabs": true,
+	"endOfLine": "auto",
+	"plugins": ["@ianvs/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
+	"importOrder": ["^react$", "<THIRD_PARTY_MODULES>", "<BUILT_IN_MODULES>", "", "@/(.*)", "", "^[.]"],
+	"importOrderSeparation": true,
+	"importOrderSortSpecifiers": true
+}

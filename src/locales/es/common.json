@@ -1,0 +1,24 @@
+{
+	"LocaleLayout": {
+		"description": "Descripción del sitio"
+	},
+	"LocaleSwitcher": {
+		"label": "Cambiar idioma",
+		"locale": "{locale, select, es {Español} en {Inglés} other {Desconocido}}"
+	},
+	"Navigation": {
+		"item1": "Item 1",
+		"item2": "Item 2",
+		"menu": "Menú"
+	},
+	"Footer": {
+		"description": "Este es un pie de página genérico.",
+		"links": "Enlaces",
+		"item1": "Item1",
+		"legal": "Legal",
+		"privacy": "Política de Privacidad",
+		"terms": "Términos y Condiciones",
+		"language": "Idioma",
+		"social": "Síguenos"
+	}
+}

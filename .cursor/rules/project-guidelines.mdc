@@ -1,0 +1,104 @@
+---
+description: This file describes how all project should be coded
+globs: 
+alwaysApply: false
+---
+# Next.js Project Coding Guidelines
+
+## Code Style
+
+- TypeScript: Use precise TypeScript types, prefer functional components with proper interfaces
+- Formatting:
+  - Use tabs for indentation
+  - Use single quotes for strings (except to avoid escaping)
+  - Add space before function declaration parentheses
+  - Always use strict equality (===)
+  - Space infix operators
+  - Use curly braces for multi-line if statements
+  - Limit line length to 150 characters
+
+## Naming Conventions
+
+- PascalCase: Components, Type definitions, Interfaces
+- kebab-case: Directory names, File names
+- camelCase: Variables, Functions, Methods, Hooks, Properties, Props
+- UPPERCASE: Environment variables, Constants, Global configurations
+
+### Special Naming Patterns
+
+- Event handlers: `handle` prefix (handleClick, handleSubmit)
+- Boolean variables: Verb prefix (isLoading, hasError)
+- Custom hooks: `use` prefix (useAuth, useForm)
+- Allowed abbreviations: err, req, res, props, ref
+
+## React & Next.js Practices
+
+- Use functional components with TypeScript interfaces
+- Extract reusable logic into custom hooks
+- Use React.memo() strategically
+- Implement proper cleanup in useEffect
+- Use useCallback and useMemo appropriately
+- Avoid inline function definitions in JSX
+- Implement proper key props (avoid using index)
+- Favor React Server Components over client components
+- Use Next.js built-in components (Image, Link, etc.)
+- Minimize 'use client', useEffect, and setState usage
+
+## File Organization
+
+- Structure: components, subcomponents, helpers, static content, types
+- Directory naming: lowercase with dashes (components/auth-wizard)
+- File naming: kebab-case (user-profile.tsx)
+
+## State Management
+
+- Local state: useState, useReducer, useContext
+- Global state: Redux Toolkit with proper slices
+- Normalize state structure, use selectors
+
+## Data Management & Firebase
+
+- Use Firebase transactions for data consistency
+- Implement proper error handling
+- Follow Firebase security best practices
+- Use appropriate Firebase services (Auth, Storage, Functions)
+
+## Error Handling & Validation
+
+- Use early returns for error conditions
+- Implement guard clauses
+- Use custom error types
+- Use Zod for schema validation
+- Implement proper error boundaries
+
+## Internationalization
+
+- Use next-intl for localization
+- Support Spanish (primary) and English (secondary)
+- Store translations in /src/locales
+
+## Accessibility
+
+- Use semantic HTML
+- Apply proper ARIA attributes
+- Ensure keyboard navigation
+- Maintain proper color contrast
+- Follow heading hierarchy
+- Make all interactive elements accessible
+
+## Security
+
+- Implement proper input validation
+- Sanitize user input (DOMPurify for HTML)
+- Follow Firebase security best practices
+
+## Performance
+
+- Optimize images (WebP, size data, lazy loading)
+- Implement code splitting
+- Use proper caching strategies
+
+## Documentation
+
+- Add JSDoc comments for functions and components
+- Provide clear comments for complex logic
