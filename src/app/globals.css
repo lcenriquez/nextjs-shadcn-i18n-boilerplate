@@ -1,212 +1,146 @@
-@import 'tailwindcss';
-
-@plugin "tailwindcss-animate";
-
-@custom-variant dark (&:is(.dark *));
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
 	/* Base colors */
-	--card: oklch(1 0 0);
-	--card-foreground: oklch(0.145 0 0);
-	--popover: oklch(1 0 0);
-	--popover-foreground: oklch(0.145 0 0);
-	--black: oklch(0 0 0);
-	--primary: #34c759; /* Primary color for actions */
-	--primary-foreground: oklch(0.985 0 0);
-	--secondary: #f7dc6f; /* Secondary elements */
-	--secondary-foreground: oklch(0.205 0 0);
-	--muted: #f5f5dc; /* Muted backgrounds */
-	--muted-foreground: oklch(0.205 0 0);
-	--accent: #87ceeb; /* Accent elements */
-	--accent-foreground: oklch(0.205 0 0);
-	--destructive: oklch(0.577 0.245 27.325);
-	--destructive-foreground: oklch(0.577 0.245 27.325);
-	--border: #f5f5dc; /* Border color */
-	--input: #f5f5dc; /* Input borders */
-	--ring: #34c759; /* Focus rings */
+	--card: 0 0% 100%;
+	--card-foreground: 0 0% 14.5%;
+	--popover: 0 0% 100%;
+	--popover-foreground: 0 0% 14.5%;
+	--black: 0 0% 0%;
+	--primary: 142 76% 36%; /* Primary color for actions */
+	--primary-foreground: 0 0% 98.5%;
+	--secondary: 48 89% 70%; /* Secondary elements */
+	--secondary-foreground: 0 0% 20.5%;
+	--muted: 60 29% 96%; /* Muted backgrounds */
+	--muted-foreground: 0 0% 20.5%;
+	--accent: 197 71% 73%; /* Accent elements */
+	--accent-foreground: 0 0% 20.5%;
+	--destructive: 0 84% 60%;
+	--destructive-foreground: 0 0% 98%;
+	--border: 60 29% 96%; /* Border color */
+	--input: 60 29% 96%; /* Input borders */
+	--ring: 142 76% 36%; /* Focus rings */
 
 	/* Chart colors - using generic palette */
-	--chart-1: #34c759; /* Green */
-	--chart-2: #87ceeb; /* Blue */
-	--chart-3: #f7dc6f; /* Yellow */
-	--chart-4: #ffc499; /* Orange */
-	--chart-5: #f5f5dc; /* Beige */
+	--chart-1: 142 76% 36%; /* Green */
+	--chart-2: 197 71% 73%; /* Blue */
+	--chart-3: 48 89% 70%; /* Yellow */
+	--chart-4: 25 95% 80%; /* Orange */
+	--chart-5: 60 29% 96%; /* Beige */
 
 	--radius: 0.625rem;
 
 	/* Sidebar colors */
-	--sidebar: oklch(0.985 0 0);
-	--sidebar-foreground: oklch(0.145 0 0);
-	--sidebar-primary: #34c759; /* Sidebar primary */
-	--sidebar-primary-foreground: oklch(0.985 0 0);
-	--sidebar-accent: #87ceeb; /* Sidebar accent */
-	--sidebar-accent-foreground: oklch(0.205 0 0);
-	--sidebar-border: #f5f5dc; /* Sidebar border */
-	--sidebar-ring: #34c759; /* Sidebar ring */
+	--sidebar: 0 0% 98.5%;
+	--sidebar-foreground: 0 0% 14.5%;
+	--sidebar-primary: 142 76% 36%; /* Sidebar primary */
+	--sidebar-primary-foreground: 0 0% 98.5%;
+	--sidebar-accent: 197 71% 73%; /* Sidebar accent */
+	--sidebar-accent-foreground: 0 0% 20.5%;
+	--sidebar-border: 60 29% 96%; /* Sidebar border */
+	--sidebar-ring: 142 76% 36%; /* Sidebar ring */
 
-	--background: oklch(1 0 0);
-	--foreground: oklch(0.145 0 0);
+	--background: 0 0% 100%;
+	--foreground: 0 0% 14.5%;
 }
 
 .dark {
-	--background: oklch(0.145 0 0);
-	--foreground: oklch(0.985 0 0);
-	--card: oklch(0.145 0 0);
-	--card-foreground: oklch(0.985 0 0);
-	--popover: oklch(0.145 0 0);
-	--popover-foreground: oklch(0.985 0 0);
+	--background: 0 0% 14.5%;
+	--foreground: 0 0% 98.5%;
+	--card: 0 0% 14.5%;
+	--card-foreground: 0 0% 98.5%;
+	--popover: 0 0% 14.5%;
+	--popover-foreground: 0 0% 98.5%;
 
 	/* Auralia colors for dark mode - using dark variants */
-	--primary: #2a9f47; /* Dark Auralia Green */
-	--primary-foreground: oklch(0.985 0 0);
-	--secondary: #c4b059; /* Dark Auralia Yellow */
-	--secondary-foreground: oklch(0.985 0 0);
-	--muted: #c4c4b0; /* Dark Auralia Beige */
-	--muted-foreground: oklch(0.708 0 0);
-	--accent: #6aa3bd; /* Dark Auralia Blue */
-	--accent-foreground: oklch(0.985 0 0);
+	--primary: 142 76% 29%; /* Dark Auralia Green */
+	--primary-foreground: 0 0% 98.5%;
+	--secondary: 48 89% 56%; /* Dark Auralia Yellow */
+	--secondary-foreground: 0 0% 98.5%;
+	--muted: 60 29% 77%; /* Dark Auralia Beige */
+	--muted-foreground: 0 0% 70.8%;
+	--accent: 197 71% 61%; /* Dark Auralia Blue */
+	--accent-foreground: 0 0% 98.5%;
 
-	--destructive: oklch(0.396 0.141 25.723);
-	--destructive-foreground: oklch(0.637 0.237 25.331);
-	--border: #c4c4b0; /* Dark Auralia Beige */
-	--input: #c4c4b0; /* Dark Auralia Beige */
-	--ring: #2a9f47; /* Dark Auralia Green */
+	--destructive: 0 62% 30%;
+	--destructive-foreground: 0 85% 60%;
+	--border: 60 29% 77%; /* Dark Auralia Beige */
+	--input: 60 29% 77%; /* Dark Auralia Beige */
+	--ring: 142 76% 29%; /* Dark Auralia Green */
 
 	/* Chart colors for dark mode */
-	--chart-1: #2a9f47; /* Dark Green */
-	--chart-2: #6aa3bd; /* Dark Blue */
-	--chart-3: #c4b059; /* Dark Yellow */
-	--chart-4: #cc9d7a; /* Dark Orange */
-	--chart-5: #c4c4b0; /* Dark Beige */
+	--chart-1: 142 76% 29%; /* Dark Green */
+	--chart-2: 197 71% 61%; /* Dark Blue */
+	--chart-3: 48 89% 56%; /* Dark Yellow */
+	--chart-4: 25 95% 64%; /* Dark Orange */
+	--chart-5: 60 29% 77%; /* Dark Beige */
 
 	/* Sidebar dark mode colors */
-	--sidebar: oklch(0.205 0 0);
-	--sidebar-foreground: oklch(0.985 0 0);
-	--sidebar-primary: #2a9f47; /* Dark Auralia Green */
-	--sidebar-primary-foreground: oklch(0.985 0 0);
-	--sidebar-accent: #6aa3bd; /* Dark Auralia Blue */
-	--sidebar-accent-foreground: oklch(0.985 0 0);
-	--sidebar-border: #c4c4b0; /* Dark Auralia Beige */
-	--sidebar-ring: #2a9f47; /* Dark Auralia Green */
+	--sidebar: 0 0% 20.5%;
+	--sidebar-foreground: 0 0% 98.5%;
+	--sidebar-primary: 142 76% 29%; /* Dark Auralia Green */
+	--sidebar-primary-foreground: 0 0% 98.5%;
+	--sidebar-accent: 197 71% 61%; /* Dark Auralia Blue */
+	--sidebar-accent-foreground: 0 0% 98.5%;
+	--sidebar-border: 60 29% 77%; /* Dark Auralia Beige */
+	--sidebar-ring: 142 76% 29%; /* Dark Auralia Green */
 }
 
 .theme-login-one {
-	--primary: #ce2a2d;
-	--primary-foreground: #fff;
-	--ring: #ce2a2d9c;
+	--primary: 0 84% 49%;
+	--primary-foreground: 0 0% 100%;
+	--ring: 0 84% 49% / 0.6;
 	--radius: 0rem;
-	--radius-sm: calc(var(--radius) - 4px);
-	--radius-md: calc(var(--radius) - 2px);
-	--radius-lg: var(--radius);
 
 	font-family: var(--font-sans);
+}
 
-	a {
-		color: var(--primary);
-	}
+.theme-login-one a {
+	color: hsl(var(--primary));
+}
 
-	[data-slot='card'] {
-		border-radius: 0rem;
-		box-shadow: none;
-	}
+.theme-login-one [data-slot='card'] {
+	border-radius: 0rem;
+	box-shadow: none;
 }
 
 .theme-login-two {
-	--primary: #035fa8;
-	--primary-foreground: #fff;
-	--ring: #035fa89c;
+	--primary: 213 94% 44%;
+	--primary-foreground: 0 0% 100%;
+	--ring: 213 94% 44% / 0.6;
 	font-family: var(--font-serif);
+}
 
-	a {
-		color: var(--primary);
-	}
+.theme-login-two a {
+	color: hsl(var(--primary));
 }
 
 .theme-login-three {
-	--primary: #22c55e;
-	--primary-foreground: #000;
-	--ring: #22c55e;
+	--primary: 142 71% 45%;
+	--primary-foreground: 0 0% 0%;
+	--ring: 142 71% 45%;
 	--radius: 1.5rem;
 
 	font-family: var(--font-manrope);
-
-	a {
-		color: var(--primary);
-	}
-
-	[data-slot='card'] {
-		@apply shadow-xl;
-	}
-
-	[data-slot='input'] {
-		@apply dark:bg-input;
-	}
 }
 
-@theme inline {
-	--font-sans: var(--font-geist-sans);
-	--font-mono: var(--font-geist-mono);
-	--color-background: var(--background);
-	--color-foreground: var(--foreground);
-	--color-card: var(--card);
-	--color-card-foreground: var(--card-foreground);
-	--color-popover: var(--popover);
-	--color-popover-foreground: var(--popover-foreground);
-	--color-primary: var(--primary);
-	--color-primary-foreground: var(--primary-foreground);
-	--color-secondary: var(--secondary);
-	--color-secondary-foreground: var(--secondary-foreground);
-	--color-muted: var(--muted);
-	--color-muted-foreground: var(--muted-foreground);
-	--color-accent: var(--accent);
-	--color-accent-foreground: var(--accent-foreground);
-	--color-destructive: var(--destructive);
-	--color-destructive-foreground: var(--destructive-foreground);
-	--color-border: var(--border);
-	--color-input: var(--input);
-	--color-ring: var(--ring);
-	--color-chart-1: var(--chart-1);
-	--color-chart-2: var(--chart-2);
-	--color-chart-3: var(--chart-3);
-	--color-chart-4: var(--chart-4);
-	--color-chart-5: var(--chart-5);
-	--radius-sm: calc(var(--radius) - 4px);
-	--radius-md: calc(var(--radius) - 2px);
-	--radius-lg: var(--radius);
-	--radius-xl: calc(var(--radius) + 4px);
-	--color-sidebar: var(--sidebar);
-	--color-sidebar-foreground: var(--sidebar-foreground);
-	--color-sidebar-primary: var(--sidebar-primary);
-	--color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-	--color-sidebar-accent: var(--sidebar-accent);
-	--color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-	--color-sidebar-border: var(--sidebar-border);
-	--color-sidebar-ring: var(--sidebar-ring);
-	--animate-accordion-down: accordion-down 0.2s ease-out;
-	--animate-accordion-up: accordion-up 0.2s ease-out;
+.theme-login-three a {
+	color: hsl(var(--primary));
+}
 
-	@keyframes accordion-down {
-		from {
-			height: 0;
-		}
-		to {
-			height: var(--radix-accordion-content-height);
-		}
-	}
+.theme-login-three [data-slot='card'] {
+	@apply shadow-xl;
+}
 
-	@keyframes accordion-up {
-		from {
-			height: var(--radix-accordion-content-height);
-		}
-		to {
-			height: 0;
-		}
-	}
+.theme-login-three [data-slot='input'] {
+	@apply dark:bg-input;
 }
 
 @layer base {
 	* {
-		@apply border-border outline-ring/50;
+		@apply border-border;
 	}
 	body {
 		@apply bg-background text-foreground;
